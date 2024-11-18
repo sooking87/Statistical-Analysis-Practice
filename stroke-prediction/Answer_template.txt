@@ -1,0 +1,21 @@
+Q1. Construction of a prediction model.
+Answer: * provide roc-auc-score up to the fifth decimal place.
+Train acc :
+Test acc :
+
+Q2. Data analysis for interpretation.
+Answer: * provide a list of what you found.
+1.
+2.
+3.
+4.
+5.
+6.
+7.
+8.
+9.
+10.
+
+Q3. Decision making using data.
+Answer: * please write within 700 characters.
+:
