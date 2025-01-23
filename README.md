@@ -14,10 +14,10 @@
 프로야구의 대중적 인기도를 평가하기 위해 2010년부터 2024년까지의 인기 관련 데이터를 수집했습니다. 관중 수를 탐색하기 위해 KBO 웹사이트(https://www.koreabaseball.com/Default.aspx )에서 연도별 관중 수 데이터를 수집했습니다. 웹 검색량은 Google Trends를 이용하여 데이터를 수집하였습니다. 파이썬의 pytrends 라이브러리를 활용하여 “야구”, “KBO”, “야구장”, “프로야구” 검색어를 사용했습니다. 기사 개수는 네이버 스포츠 기사(https://sports.news.naver.com/kbaseball/news/index?isphoto=N&view=photo )를 통해 웹 크롤링을 진행하였습니다. 유튜브 데이터는 깃허브 youtube_scraper(https://github.com/Gilhwan/youtube_scraper )를 통해서 유튜브 데이터를 수집하였습니다. 수집한 유튜브 채널명은 “KBO”입니다. <br>
 <br>
 
-![img](../../assets/image/project/statistical_analysis/statistical_analysis_1.jpg) <br>
+![img](./image/statistical_analysis_1.jpg) <br>
 2024시즌 구단별 야구 인기도의 기여 정도를 분석하기 위해서 2024년 구단별 데이터를 수집했습니다. 2024년 구단별 관중 수는 KBO 웹사이트(https://www.koreabaseball.com/Record/Crowd/GraphTeam.aspx )에서 수집하였습니다. 웹 검색량은 Google Trends를 이용하여 구단명을 검색어로 사용하여 데이터를 수집하였습니다. <br>
 유튜브 데이터는 youtube_scraper(https://github.com/Gilhwan/youtube_scraper )를 통해서 유튜브 데이터를 수집하였습니다. 유튜브 데이터의 경우 조회수, 좋아요수, 댓글 수 데이터를 수집하였습니다. <br> <br>
-![img](../../assets/image/project/statistical_analysis/statistical_analysis_2.jpg) <br>
+![img](./image/statistical_analysis_2.jpg) <br>
 
 ### 2️⃣ 데이터 분석 및 결과
 
@@ -26,7 +26,7 @@
 야구의 인기도는 관중 수로 수치화되었다고 가정하고, 웹 검색량, 기사 개수, 유튜브 데이터를 독립 변수로 활용하여 랜덤 포레스트를 적용했습니다. 랜덤 포레스트를 선택한 이유는 수집한 데이터들이 관중 수와 선형적인 관계를 가지지 않으며, 정규성을 가지고 있지 않기 때문입니다. 독립 변수들은 랜덤 포레스트의 feature_importances_ 로 변수별 가중치를 지정하였습니다. <br>
 분석 결과, 웹 검색량과 기사 개수가 관중 수에 가장 큰 영향을 미치는 변수로 나타났으며, 유튜브 데이터는 상대적으로 낮은 중요도를 보였습니다. 각 변수의 중요도는 아래 그림과 같습니다. <br>
 
-![img](../../assets/image/project/statistical_analysis/statistical_analysis_3.jpg) <br>
+![img](/image/statistical_analysis_3.jpg) <br>
 
 - 구단별 흥행 기여도 분석
 
@@ -35,7 +35,7 @@ $$score = (web\_search\_count \times w1) + (article\_count \times w2) + (youtube
 기여도 분석을 하기 위해서 구한 가중치의 경우 야구 인기도 지표 분석을 통해서 구한 가중치를 사용하였으며, 구단별 흥행 기여도 분석을 위해서는 구단별 관중 수와 흥행 기여도 점수와는 무관합니다. 
 한화, 기아, 롯데가 가장 높은 점수가 나왔으며 2024시즌 동안 야구 흥행에 가장 크게 기여했음을 보여줍니다. 그 외 10개 구단에 대한 야구 인기도에 기여한 정도는 아래 그림과 같습니다. <br>
 
-![img](../../assets/image/project/statistical_analysis/statistical_analysis_4.jpg) <br>
+![img](/image/statistical_analysis_4.jpg) <br>
 
 ## Result
 
